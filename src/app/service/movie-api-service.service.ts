@@ -15,4 +15,8 @@ export class MovieApiServiceService {
     return this.http.get(`${baseurl}/trending/all/week?api_key=${apikey}&language=en-US`);
   }
 
+  trendingMovieApiData():Observable<any>{
+    return this.http.get(`${baseurl}/trending/movie/day?api_key=${apikey}&language=en-US`)
+  }
+
 }
