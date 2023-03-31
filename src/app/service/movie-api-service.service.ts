@@ -19,4 +19,22 @@ export class MovieApiServiceService {
     return this.http.get(`${baseurl}/trending/movie/day?api_key=${apikey}&language=en-US`)
   }
 
+  actionMovieApiData():Observable<any>{
+    return this.http.get(`${baseurl}/discover/movie?api_key=${apikey}&with_genres=28`)
+  }
+
+  comedyMovieApiData():Observable<any>{
+    return this.http.get(`${baseurl}/discover/movie?api_key=${apikey}&with_genres=35`)
+  }
+
+  horrorMovieApiData():Observable<any>{
+    return this.http.get(`${baseurl}/discover/movie?api_key=${apikey}&with_genres=27`)
+  }
+  romanceMovieApiData():Observable<any>{
+    return this.http.get(`${baseurl}/discover/movie?api_key=${apikey}&with_genres=10749`)
+  }
+  documentaryApiData():Observable<any>{
+    return this.http.get(`${baseurl}/discover/movie?api_key=${apikey}&with_genres=99`)
+  }
+
 }

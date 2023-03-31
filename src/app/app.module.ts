@@ -9,6 +9,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 import {HttpClientModule} from "@angular/common/http"
 import { MovieApiServiceService } from './service/movie-api-service.service';
+import { RowpostComponent } from './rowpost/rowpost.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MovieApiServiceService } from './service/movie-api-service.service';
     NavbarComponent,
     HomeComponent,
     SearchComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    RowpostComponent
   ],
   imports: [
     BrowserModule,

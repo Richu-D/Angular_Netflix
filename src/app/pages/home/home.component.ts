@@ -10,9 +10,19 @@ export class HomeComponent implements OnInit{
   constructor(private service:MovieApiServiceService){}
   bannerResult:any[] = []
   trendingMovieResult:any[] = []
+  actionMovieResult:any[] = []
+  comedyMovieResult:any[] = []
+  horrorMovieResult:any[] = []
+  romanticMovieResult:any[] = []
+  documentaryMovieResult:any[] = []
   ngOnInit(): void {
       this.bannerData()
       this.trendingData()
+      this.actionData()
+      this.comedyData()
+      this.horrorData()
+      this.romanceData()
+      this.documentryData()
   }
 
   bannerData(){
@@ -26,4 +36,34 @@ export class HomeComponent implements OnInit{
       this.trendingMovieResult = result.results;
     })
   }
+
+  actionData(){
+    this.service.actionMovieApiData().subscribe((result)=>{
+      this.actionMovieResult = result.results;
+    })
+  }
+  comedyData(){
+    this.service.comedyMovieApiData().subscribe((result)=>{
+      this.comedyMovieResult = result.results;
+    })
+  }
+
+  horrorData(){
+    this.service.horrorMovieApiData().subscribe((result)=>{
+      this.horrorMovieResult = result.results;
+    })
+  }
+  
+  romanceData(){
+    this.service.romanceMovieApiData().subscribe((result)=>{
+      this.romanticMovieResult = result.results;
+    })
+  }
+
+  documentryData(){
+    this.service.documentaryApiData().subscribe((result)=>{
+      this.documentaryMovieResult = result.results;
+    })
+  }
+
 }
