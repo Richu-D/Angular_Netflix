@@ -26,3 +26,8 @@
 .rowposter::-webkit-scrollbar{
     display: none;
 }
+
+iframe{
+    display: block;
+    margin: 0 auto;
+}

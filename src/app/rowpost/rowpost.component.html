@@ -3,8 +3,9 @@
       <h5 class="text-white">{{Title}}</h5>
       <div class="rowposter mt-3 p-2">
         <ng-container *ngFor="let item of array">
-          <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largePoster" alt="{{item.original_title}}">
+          <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largePoster" alt="{{item.original_title}}" (click)="getTrailerId(item.id)">
         </ng-container>
       </div>
     </div>
   </div>
+  <iframe *ngIf="trailerUrl" width="853" height="480" [src]="trailerUrl" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

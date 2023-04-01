@@ -23,7 +23,7 @@ import { RowpostComponent } from './rowpost/rowpost.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [MovieApiServiceService],
   bootstrap: [AppComponent]

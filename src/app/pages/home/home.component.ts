@@ -7,7 +7,8 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  constructor(private service:MovieApiServiceService){}
+  constructor(private service:MovieApiServiceService){
+  }
   bannerResult:any[] = []
   trendingMovieResult:any[] = []
   actionMovieResult:any[] = []
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit{
 
   bannerData(){
     this.service.bannerApiData().subscribe((result)=>{
-      this.bannerResult = result.results;
+      this.bannerResult = result.results;      
     })
   }
 

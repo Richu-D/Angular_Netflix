@@ -9,8 +9,10 @@ import { apikey, baseurl } from './secretKey';
 export class MovieApiServiceService {
   
   constructor(private http:HttpClient) { }
-  
-  
+  getMovieVideos(id: number): Observable<any> {
+    return this.http.get(`${baseurl}/movie/${id}/videos?api_key=${apikey}&language=en-US`);
+  }
+
   bannerApiData():Observable<any>{
     return this.http.get(`${baseurl}/trending/all/week?api_key=${apikey}&language=en-US`);
   }
